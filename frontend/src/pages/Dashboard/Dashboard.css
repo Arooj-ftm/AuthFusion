@@ -1,0 +1,119 @@
+.dashboard {
+    min-height: 100vh;
+}
+
+.dashboard-container {
+
+    padding: 40px 60px;
+
+    display: grid;
+
+    grid-template-columns: 340px 1fr;
+
+    gap: 35px;
+
+}
+
+.welcome-box {
+
+    margin-bottom: 30px;
+
+}
+
+.welcome-box h1 {
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+}
+
+.welcome-box span {
+
+    color: #d4af37;
+
+}
+
+.welcome-box p {
+
+    color: #999;
+
+}
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 35px;
+
+}
+
+.activity-card {
+
+    background: rgba(255, 255, 255, .05);
+
+    border: 1px solid rgba(212, 175, 55, .15);
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+}
+
+.activity-card h2 {
+
+    margin-bottom: 20px;
+
+    color: #d4af37;
+
+}
+
+.activity-card ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+.activity-card li {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
+
+}
+
+.activity-card svg {
+
+    color: #d4af37;
+
+}
+
+@media(max-width:1000px) {
+
+    .dashboard-container {
+
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+
+    }
+
+    .stats-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

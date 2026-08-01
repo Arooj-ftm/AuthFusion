@@ -1,0 +1,105 @@
+.navbar {
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 60px;
+
+    border-bottom: 1px solid rgba(212, 175, 55, .15);
+
+    backdrop-filter: blur(16px);
+
+    background: rgba(255, 255, 255, .03);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo h2 {
+    color: #d4af37;
+    font-size: 28px;
+}
+
+.logo-icon {
+    color: #d4af37;
+    font-size: 30px;
+}
+
+.nav-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+.user-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+.user-icon {
+
+    font-size: 42px;
+
+    color: #d4af37;
+
+}
+
+.user-info h4 {
+
+    margin: 0;
+
+}
+
+.user-info span {
+
+    font-size: 13px;
+
+    color: #999;
+
+}
+
+.logout-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    background: #d4af37;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.logout-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(212, 175, 55, .4);
+
+}

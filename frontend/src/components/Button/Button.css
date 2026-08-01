@@ -1,0 +1,24 @@
+.auth-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #d4af37, #f4d03f);
+    color: #111;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: all 0.35s ease;
+}
+
+.auth-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(212, 175, 55, 0.35);
+}
+
+.auth-btn:active {
+    transform: scale(0.98);
+}
