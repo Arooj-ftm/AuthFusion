@@ -117,3 +117,57 @@
     }
 
 }
+
+
+
+
+/* Loading Screen */
+
+.dashboard-loading {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #d4af37;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Empty State */
+
+.empty-state {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-box {
+    text-align: center;
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(212, 175, 55, .15);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.empty-box h2 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.empty-box p {
+    color: #999;
+}

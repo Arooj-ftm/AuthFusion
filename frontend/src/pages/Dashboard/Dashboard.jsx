@@ -1,12 +1,9 @@
 import "./Dashboard.css";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 import Navbar from "../../components/Navbar/Navbar";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import StatCard from "../../components/StatCard/StatCard";
-
-import API from "../../services/authService";
+import { useAuth } from "../../context/AuthContext";
 
 import {
     FaShieldAlt,
@@ -16,49 +13,39 @@ import {
 } from "react-icons/fa";
 
 function Dashboard() {
-    const navigate = useNavigate();
 
-    const [user, setUser] = useState(null);
+    const { user, loading } = useAuth();
 
-    const logout = () => {
-        localStorage.removeItem("token");
-        navigate("/");
-    };
+    if (loading) {
+        return (
+            <div className="dashboard-loading">
+                <div className="loader"></div>
+            </div>
+        );
+    }
 
-    useEffect(() => {
-        const fetchProfile = async () => {
-            try {
-                const token = localStorage.getItem("token");
 
-                const res = await API.get("/profile", {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                });
-
-                setUser(res.data.user);
-            } catch (err) {
-                logout();
-            }
-        };
-
-        fetchProfile();
-    }, []);
+    if (!user) {
+        return (
+            <div className="empty-state">
+                <div className="empty-box">
+                    <h2>No Profile Found</h2>
+                    <p>Please login to continue.</p>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="dashboard">
 
-            <Navbar
-                user={user}
-                onLogout={logout}
-            />
+            <Navbar />
 
             <div className="dashboard-container">
 
                 <div className="left-side">
 
-                    <ProfileCard user={user} />
-
+                    <ProfileCard />
                 </div>
 
                 <div className="right-side">
